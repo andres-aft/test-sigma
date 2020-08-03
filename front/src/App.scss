@@ -1,0 +1,126 @@
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 18px;
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    figure {
+      margin: 0;
+      padding: 0;
+      img {
+        width: 250px;
+        height: auto;
+      }
+    }
+  }
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .title-container{
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        font-size: 2.3em;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+      }
+      div {
+        width: 50%;
+        margin-top: 1em;
+        text-align: center;
+        span{
+          color: #737172;
+          font-weight: 400;
+          font-family: 'Roboto', sans-serif;
+        }
+      }
+    }
+    .content-container{
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      .image-container {
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        figure{
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .form-container {
+        width: 500px;
+        display: flex;
+        margin-left: 30px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        form{
+          width: 100%;
+          padding: 30px;
+          -webkit-box-shadow: 0 3px 15px -1px rgba(150,150,150,0.72);
+          -moz-box-shadow: 0 3px 15px -1px rgba(150,150,150,0.72);
+          box-shadow: 0 3px 15px -1px rgba(150,150,150,0.72);
+          border-radius: 10px 19px 19px 19px;
+          -moz-border-radius: 10px 19px 19px 19px;
+          -webkit-border-radius: 10px 19px 19px 19px;
+          button {
+            background: #e03b65;
+            border-radius: 29px;
+            border: none;
+            padding: 16px 45px;
+          }
+          select, input {
+            width: 100%;
+          }
+          label {
+            font-weight: bold;
+          }
+          .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1056px){
+  .App {
+    main {
+      .content-container{
+        flex-direction: column;
+        align-items: center;
+        .image-container{
+
+        }
+        .form-container{
+          margin: 0;
+        }
+      }
+    }
+  }
+}
