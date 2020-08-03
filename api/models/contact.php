@@ -15,7 +15,7 @@
 
         function Contact() {
             $this->table_name = "contacts";
-            $pdo = new PDO('mysql:host=localhost;dbname=test_stiven;charset=utf8', 'root', '');
+            $pdo = new PDO('mysql:host=178.128.146.252;dbname=admin_sigmatest;charset=utf8', 'admin_sigmauser', 'pfaDKIJyPF');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
             $this->fluent = new FluentPDO($pdo);
@@ -96,7 +96,7 @@
 
             }            
             $result = $this->fluent->from($this->table_name)
-                    ->where('id',$data['id'])
+                    ->where('email',$data['email'])
                         ->fetch();            
             return json_encode($result);
         }
